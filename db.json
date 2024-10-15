@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "password1"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "password2"
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "password": "password3"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "nome": "Mario",
+      "cognome": "Rossi",
+      "email": "mario.rossi@example.com",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "nome": "Luigi",
+      "cognome": "Verdi",
+      "email": "luigi.verdi@example.com",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "nome": "Anna",
+      "cognome": "Bianchi",
+      "email": "anna.bianchi@example.com",
+      "userId": 1
+    }
+  ]
+}
