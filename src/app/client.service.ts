@@ -14,6 +14,7 @@ export interface Client {
   providedIn: 'root'
 })
 export class ClientService {
+
   private apiUrl = 'http://localhost:3000/clients';
 
   constructor(private http: HttpClient) { }
@@ -30,5 +31,9 @@ export class ClientService {
   updateClient(client: Client): Observable<Client> {
     const url = `${this.apiUrl}/${client.id}`;
     return this.http.put<Client>(url, client);
+  }
+  deleteClient(id: number): Observable<void> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete<void>(url);
   }
 }

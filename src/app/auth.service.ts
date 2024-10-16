@@ -8,7 +8,6 @@ export interface User {
   password: string;
 }
 
-
 @Injectable({
   providedIn: 'root'
 })

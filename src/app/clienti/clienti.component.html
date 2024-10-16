@@ -1,6 +1,11 @@
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="clienti" class="mat-elevation-z8">
 
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef > Id </th>
+        <td mat-cell *matCellDef="let cliente"> {{cliente.id}} </td>
+      </ng-container>
+
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef > Nome </th>
         <td mat-cell *matCellDef="let cliente"> {{cliente.nome}} </td>
@@ -24,13 +29,13 @@
         </td>
       </ng-container>
 
-      <ng-container matColumnDef="delite">
-        <th mat-header-cell *matHeaderCellDef> Delite </th>
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> Delete </th>
         <td mat-cell *matCellDef="let cliente">
-          <button mat-button color="warn">Delete</button>
+          <button mat-button color="warn" (click)="onDelete(cliente.id)">Delete</button>
         </td>
       </ng-container>
-
+      
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
@@ -58,52 +63,16 @@
           Cognome è obbligatorio e deve contenere solo lettere.
         </div>
       </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="text" class="form-control" formControlName="email">
+        <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-danger">
+          Email è obbligatorio e deve contenere solo lettere.
+        </div>
+      </div>
   
       <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Invia</button>
   
     </form>
   </div>
-
-  <!-- Form di Modifica
-<div *ngIf="clienteSelezionato" class="edit-form">
-  <h3>Modifica Cliente</h3>
-  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-    <mat-form-field>
-      <mat-label>Nome</mat-label>
-      <input matInput formControlName="nome">
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Cognome</mat-label>
-      <input matInput formControlName="cognome">
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Email</mat-label>
-      <input matInput formControlName="email">
-    </mat-form-field>
-
-    <button mat-flat-button type="submit">Conferma Modifica</button>
-  </form>
-
-  <div *ngIf="aggiungiCliente" class="edit-form">
-    <h3>aggiungi Cliente</h3>
-    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-      <mat-form-field>
-        <mat-label>Nome</mat-label>
-        <input matInput formControlName="nome">
-      </mat-form-field>
-  
-      <mat-form-field>
-        <mat-label>Cognome</mat-label>
-        <input matInput formControlName="cognome">
-      </mat-form-field>
-  
-      <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input matInput formControlName="email">
-      </mat-form-field>
-  
-      <button mat-flat-button type="submit">Conferma Aggiunta</button>
-    </form>
-     -->

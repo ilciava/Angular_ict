@@ -1,4 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+/* Tabelle */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Intestazione della tabella */
+th {
+  background-color: #007bff; /* Colore blu per l'intestazione */
+  color: white; /* Testo bianco per contrasto */
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Celle della tabella */
+td {
+  padding: 10px;
+  color: #333; /* Testo grigio scuro per contrasto */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Righe alternate per il corpo della tabella */
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Grigio chiaro per righe pari */
+}
+
+tr:nth-child(odd) {
+  background-color: #e6e6e6; /* Grigio scuro per righe dispari */
+}
+
+/* Pulsanti Edit e Delete */
+button.edit {
+  background-color: #007bff; /* Colore blu per il pulsante Edit */
+  color: white;
+}
+
+button.delete {
+  background-color: #dc3545; /* Colore rosso per il pulsante Delete */
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
