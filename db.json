@@ -25,18 +25,11 @@
       "userId": 2
     },
     {
-      "id": "ed46",
-      "nome": "Angelo",
-      "cognome": "Ciavarelli",
-      "email": "angelociavarelli@gmail.com",
-      "userId": "1"
-    },
-    {
-      "id": "7516",
-      "nome": "Corrado",
-      "cognome": "Ciavarelli",
-      "email": "angelociavarelli@gmail.com",
-      "userId": "1"
+      "nome": "Mariasdf",
+      "cognome": "Rossi",
+      "email": "mario.rossi@example.com",
+      "userId": "1",
+      "id": "496a"
     }
   ]
 }

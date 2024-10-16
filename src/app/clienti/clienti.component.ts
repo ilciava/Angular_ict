@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Client, ClientService } from '../client.service';
 import { Observable } from 'rxjs';
+import './clienti.component.css';
 
 @Component({
   selector: 'app-clienti',
